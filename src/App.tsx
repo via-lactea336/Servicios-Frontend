@@ -6,22 +6,22 @@ import HomePage from "./pages/HomePage";
 import ServiciosPage from "./pages/ServiciosPage";
 import PerfilPage from "./pages/PerfilPage";
 import PropuestasPage from "./pages/PropuestasPage";
-import AddService from "./components/services/AddService";
-import ServiceList from "./components/services/ServiceList";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-100">
         <Header />
-        <AddService />
-        <ServiceList />
         <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/servicios" element={<ServiciosPage />} />
             <Route path="/perfil" element={<PerfilPage />} />
             <Route path="/propuestas" element={<PropuestasPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </main>
         <Footer />
